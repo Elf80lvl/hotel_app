@@ -14,7 +14,8 @@ const kColorLink = Color(0xff0D72FF);
 final kColorTagLinkBG = const Color(0xff0D72FF).withOpacity(0.1);
 //*tag
 const kColorTagTextGrey = Color(0xff828796);
-const kColorTagBG = Color(0xffFBFBFC);
+// const kColorTagBG = Color(0xffFBFBFC); //original
+const kColorTagBG = Color.fromARGB(255, 249, 249, 250);
 //*text
 const kColorTextTitleLight = Color(0xff000000);
 final kColorTextBodyPrimaryLight = const Color(0xff000000).withOpacity(0.9);
@@ -33,3 +34,26 @@ final kColorRatingTagBG = const Color(0xffFFC700).withOpacity(0.2);
 const kColorTextFieldBGlight = Color(0xffF6F6F9);
 const kColorTextFieldTextPrimaryLight = Color(0xff14142B);
 const kColorTextFieldTextSecondaryLight = Color(0xffA9ABB7);
+//*gallery indicator
+const kColorGalleryIndicatorActiveLight = Color(0xff000000);
+final kColorGalleryIndicatorNotActiveLight =
+    const Color(0xff000000).withOpacity(0.2);
+
+//*BORDER RADIUS
+const kBorderRadiusRatingTag = 5.0;
+const kBorderRadiusGalleryIndicatorBg = 5.0;
+const kBorderRadiusHotelImage = 15.0;
+const kBorderRadiusCard = 12.0;
+
+const kDecorationCardFirst = BoxDecoration(
+  color: kColorCardBGlight,
+  borderRadius: BorderRadius.only(
+    bottomLeft: Radius.circular(kBorderRadiusCard),
+    bottomRight: Radius.circular(kBorderRadiusCard),
+  ),
+);
+
+final kDecorationCardSecond = BoxDecoration(
+  color: kColorCardBGlight,
+  borderRadius: BorderRadius.circular(kBorderRadiusCard),
+);

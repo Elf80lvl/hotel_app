@@ -2,7 +2,6 @@ import 'package:app_test_vacancy/generated/l10n.dart';
 import 'package:app_test_vacancy/pages/hotel_page/bloc/hotel_page_bloc.dart';
 import 'package:app_test_vacancy/pages/hotel_page/hotel_layout_loaded.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
-import 'package:app_test_vacancy/service/network.dart';
 import 'package:app_test_vacancy/widgets/default_loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,8 +26,14 @@ class HotelPage extends StatelessWidget {
               return const DefaultLoadingWidget();
             }
             if (state is HotelPageLoadedState) {
-              return HotelLayoutLoaded(
-                data: state.data,
+              return RefreshIndicator(
+                onRefresh: () async {
+                  BlocProvider.of<HotelPageBloc>(context)
+                      .add(HotelPageGetInfoEvent());
+                },
+                child: HotelLayoutLoaded(
+                  data: state.data,
+                ),
               );
             }
             //TODO

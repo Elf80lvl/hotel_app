@@ -7,12 +7,18 @@ final kThemeLight = ThemeData(
   primaryTextTheme: TextTheme(
     bodyLarge: TextStyle(
       color: kColorTextBodyPrimaryLight,
+      // fontFamily: 'SF-Pro-Display',
+      fontWeight: FontWeight.w500,
     ),
     bodyMedium: TextStyle(
       color: kColorTextBodyPrimaryLight,
+      // fontFamily: 'SF-Pro-Display',
+      fontWeight: FontWeight.w500,
     ),
     bodySmall: TextStyle(
       color: kColorTextBodyPrimaryLight,
+      // fontFamily: 'SF-Pro-Display',
+      fontWeight: FontWeight.w500,
     ),
   ),
   appBarTheme: const AppBarTheme(
@@ -24,5 +30,8 @@ final kThemeLight = ThemeData(
       fontFamily: 'SF-Pro-Display',
       fontWeight: FontWeight.w500,
     ),
+  ),
+  cardTheme: const CardTheme(
+    color: kColorCardBGlight,
   ),
 );

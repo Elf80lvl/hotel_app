@@ -59,6 +59,26 @@ class S {
       args: [],
     );
   }
+
+  /// `от`
+  String get from {
+    return Intl.message(
+      'от',
+      name: 'from',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `об отеле`
+  String get about_the_hotel {
+    return Intl.message(
+      'об отеле',
+      name: 'about_the_hotel',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

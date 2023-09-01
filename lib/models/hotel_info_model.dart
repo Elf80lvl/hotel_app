@@ -10,6 +10,8 @@ class HotelInfoModel {
   final int rating;
   final String ratingName;
   final List<String> imageUrls;
+  final String description;
+  final List<String> peculiarities;
 
   HotelInfoModel({
     required this.id,
@@ -20,6 +22,8 @@ class HotelInfoModel {
     required this.rating,
     required this.ratingName,
     required this.imageUrls,
+    required this.description,
+    required this.peculiarities,
   });
 
   factory HotelInfoModel.fromRawJson(String str) =>
@@ -34,6 +38,9 @@ class HotelInfoModel {
         rating: json["rating"],
         ratingName: json["rating_name"],
         imageUrls: List<String>.from(json["image_urls"].map((x) => x)),
+        description: json["about_the_hotel"]["description"],
+        peculiarities: List<String>.from(
+            json["about_the_hotel"]["peculiarities"].map((x) => x)),
       );
 }
 
