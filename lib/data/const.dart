@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 //*COLORS
 const kColorScaffoldBGLight = Color(0xffF6F6F9);
+//*appbar
+const kColorAppBarBGlight = Color(0xffFFFFFF);
 //*card
 const kColorCardBGlight = Color(0xffFFFFFF);
 //*buttons
@@ -14,8 +16,9 @@ final kColorTagLinkBG = const Color(0xff0D72FF).withOpacity(0.1);
 const kColorTagTextGrey = Color(0xff828796);
 const kColorTagBG = Color(0xffFBFBFC);
 //*text
-final kColorTextPrimary = const Color(0xff000000).withOpacity(0.9);
-const kColorTextSecondary = Color(0xff828796);
+const kColorTextTitleLight = Color(0xff000000);
+final kColorTextBodyPrimaryLight = const Color(0xff000000).withOpacity(0.9);
+const kColorTextSecondaryLight = Color(0xff828796);
 //*icons
 const kColorIconLight = Color(0xff000000);
 //*bar buttons
