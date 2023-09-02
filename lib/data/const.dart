@@ -23,7 +23,9 @@ const kColorTextSecondaryLight = Color(0xff828796);
 //*icons
 const kColorIconLight = Color(0xff000000);
 //*bar buttons
-const kColorBarButtonBGlight = Color(0xffFBFBFC);
+// const kColorBarButtonBGlight = Color(0xffFBFBFC);//original
+final kColorDivider = const Color(0xff828796).withOpacity(0.15);
+const kColorBarButtonBGlight = kColorTagBG;
 const kColorBarButtonTextLight = Color(0xff2C3035);
 const kColorBarButtonIconArrowLight = Color(0xff2C3035);
 const kColorBarButtonTextSecondaryLight = Color(0xff828796);
@@ -44,6 +46,7 @@ const kBorderRadiusRatingTag = 5.0;
 const kBorderRadiusGalleryIndicatorBg = 5.0;
 const kBorderRadiusHotelImage = 15.0;
 const kBorderRadiusCard = 12.0;
+const kBorderRadiusButtonBarBG = 15.0;
 
 //*PADDING
 const kPaddingHorizApp = 16.0;

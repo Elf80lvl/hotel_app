@@ -79,6 +79,46 @@ class S {
       args: [],
     );
   }
+
+  /// `удобства`
+  String get facilities {
+    return Intl.message(
+      'удобства',
+      name: 'facilities',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `что включено`
+  String get included {
+    return Intl.message(
+      'что включено',
+      name: 'included',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `что не включено`
+  String get not_included {
+    return Intl.message(
+      'что не включено',
+      name: 'not_included',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `все необходимое`
+  String get all_necessary {
+    return Intl.message(
+      'все необходимое',
+      name: 'all_necessary',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

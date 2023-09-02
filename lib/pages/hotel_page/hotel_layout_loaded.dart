@@ -8,8 +8,10 @@ import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_title_widget.dar
 import 'package:app_test_vacancy/pages/hotel_page/widgets/price_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/rating_tag_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tags_widget.dart';
+import 'package:app_test_vacancy/pages/hotel_page/widgets/tile_bars.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HotelLayoutLoaded extends StatelessWidget {
   final HotelInfoModel data;
@@ -75,11 +77,13 @@ class HotelLayoutLoaded extends StatelessWidget {
 
                   const SizedBox(height: 16),
 
-                  const SizedBox(height: 16),
+                  const TileBars(),
+                  const SizedBox(height: kPaddingHorizApp),
                 ],
               ),
             ),
           ),
+          const SizedBox(height: 100),
         ],
       ),
     );

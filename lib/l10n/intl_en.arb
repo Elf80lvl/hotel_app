@@ -1,5 +1,9 @@
 {
     "hotel": "отель",
     "from": "от",
-    "about_the_hotel": "об отеле"
+    "about_the_hotel": "об отеле",
+    "facilities": "удобства",
+    "included": "что включено",
+    "not_included": "что не включено",
+    "all_necessary": "все необходимое"
 }

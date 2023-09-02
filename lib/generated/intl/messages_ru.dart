@@ -23,7 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about_the_hotel": MessageLookupByLibrary.simpleMessage("об отеле"),
+        "all_necessary":
+            MessageLookupByLibrary.simpleMessage("все необходимое"),
+        "facilities": MessageLookupByLibrary.simpleMessage("удобства"),
         "from": MessageLookupByLibrary.simpleMessage("от"),
-        "hotel": MessageLookupByLibrary.simpleMessage("отель")
+        "hotel": MessageLookupByLibrary.simpleMessage("отель"),
+        "included": MessageLookupByLibrary.simpleMessage("что включено"),
+        "not_included": MessageLookupByLibrary.simpleMessage("что не включено")
       };
 }
