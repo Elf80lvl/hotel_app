@@ -27,7 +27,7 @@ final kThemeLight = ThemeData(
     titleTextStyle: TextStyle(
       color: kColorTextTitleLight,
       fontSize: 18,
-      fontFamily: 'SF-Pro-Display',
+      fontFamily: kFontFamilyDefault,
       fontWeight: FontWeight.w500,
     ),
   ),

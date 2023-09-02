@@ -45,6 +45,12 @@ const kBorderRadiusGalleryIndicatorBg = 5.0;
 const kBorderRadiusHotelImage = 15.0;
 const kBorderRadiusCard = 12.0;
 
+//*PADDING
+const kPaddingHorizApp = 16.0;
+
+//*FONTS
+const kFontFamilyDefault = 'SF-Pro-Display';
+
 const kDecorationCardFirst = BoxDecoration(
   color: kColorCardBGlight,
   borderRadius: BorderRadius.only(

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:dio/dio.dart';
 
@@ -11,9 +9,7 @@ class Network {
       const String url =
           'https://run.mocky.io/v3/35e0d18e-2521-4f1b-a575-f0fe366f66e3';
       final response = await dio.get(url);
-      final str = response.toString();
-      // print(response);
-      return HotelInfoModel.fromRawJson(str);
+      return HotelInfoModel.fromRawJson(response.toString());
     } catch (e) {
       print(e);
     }

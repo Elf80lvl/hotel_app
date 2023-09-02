@@ -13,27 +13,32 @@ class PriceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            '${S.of(context).from} ${data.minimalPrice.toString()} ₽ ',
-            style: const TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w500,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kPaddingHorizApp),
+      child: FittedBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '${S.of(context).from} ${data.minimalPrice.toString()} ₽ ',
+              style: const TextStyle(
+                fontFamily: kFontFamilyDefault,
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
+              ),
             ),
-          ),
-          Text(
-            data.priceForIt.toLowerCase(),
-            style: const TextStyle(
-              fontSize: 16,
-              color: kColorTextSecondaryLight,
+            Text(
+              data.priceForIt.toLowerCase(),
+              style: const TextStyle(
+                fontFamily: kFontFamilyDefault,
+                fontSize: 16,
+                color: kColorTextSecondaryLight,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -22,6 +22,7 @@ class TagsWidget extends StatelessWidget {
           child: Text(
             data[index].toString(),
             style: const TextStyle(
+              fontFamily: kFontFamilyDefault,
               color: kColorTagTextGrey,
               fontSize: 16,
               fontWeight: FontWeight.w500,

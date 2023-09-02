@@ -13,27 +13,31 @@ class RatingTagWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kColorRatingTagBG,
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: FittedBox(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              SvgPicture.asset('assets/icons/star.svg'),
-              const SizedBox(width: 6),
-              Text(
-                '${data.rating} ${data.ratingName}',
-                style: const TextStyle(
-                  color: kColorRatingTagPrimary,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 16,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kPaddingHorizApp),
+      child: Container(
+        decoration: BoxDecoration(
+          color: kColorRatingTagBG,
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: FittedBox(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                SvgPicture.asset('assets/icons/star.svg'),
+                const SizedBox(width: 6),
+                Text(
+                  '${data.rating} ${data.ratingName}',
+                  style: const TextStyle(
+                    fontFamily: kFontFamilyDefault,
+                    color: kColorRatingTagPrimary,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

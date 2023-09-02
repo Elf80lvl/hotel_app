@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 class HotelInfoModel {
@@ -43,30 +42,3 @@ class HotelInfoModel {
             json["about_the_hotel"]["peculiarities"].map((x) => x)),
       );
 }
-
-
-
-
-// class HotelInfoModel {
-//   String? name;
-//   String? adress;
-//   double? minimalPrice;
-//   String? priceForIt;
-//   double? rating;
-//   String? ratingName;
-//   List<String>? imgUrls;
-//   String? description;
-//   List<String>? peculiarities;
-
-//   HotelInfoModel({
-//     required this.name,
-//     required this.adress,
-//     required this.minimalPrice,
-//     required this.priceForIt,
-//     required this.rating,
-//     required this.ratingName,
-//     required this.imgUrls,
-//     required this.description,
-//     required this.peculiarities,
-//   });
-// }
