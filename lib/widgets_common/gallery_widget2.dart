@@ -1,14 +1,15 @@
 import 'package:app_test_vacancy/data/const.dart';
-import 'package:app_test_vacancy/models/hotel_info_model.dart';
+import 'package:app_test_vacancy/service/validate_url.dart';
+import 'package:app_test_vacancy/widgets_common/default_loading_widget.dart';
 import 'package:flutter/material.dart';
 
 class GalleryWidget2 extends StatefulWidget {
   const GalleryWidget2({
     super.key,
-    required this.data,
+    required this.imageUrls,
   });
 
-  final HotelInfoModel data;
+  final List<String> imageUrls;
 
   @override
   State<GalleryWidget2> createState() => _GalleryWidget2State();
@@ -32,7 +33,7 @@ class _GalleryWidget2State extends State<GalleryWidget2> {
                 });
               },
               controller: _pageController,
-              itemCount: widget.data.imageUrls.length,
+              itemCount: widget.imageUrls.length,
               itemBuilder: (BuildContext context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -40,7 +41,20 @@ class _GalleryWidget2State extends State<GalleryWidget2> {
                     borderRadius:
                         BorderRadius.circular(kBorderRadiusHotelImage),
                     child: Image.network(
-                      widget.data.imageUrls[index],
+                      widget.imageUrls[index],
+                      loadingBuilder: (context, child, loadingProgress) {
+                        if (loadingProgress == null) return child;
+                        return const DefaultLoadingWidget();
+                      },
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Center(
+                          child: Icon(
+                            Icons.broken_image,
+                            color: Colors.grey,
+                            size: 64,
+                          ),
+                        );
+                      },
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
@@ -63,7 +77,7 @@ class _GalleryWidget2State extends State<GalleryWidget2> {
                       BorderRadius.circular(kBorderRadiusGalleryIndicatorBg)),
               child: Row(
                 children: List.generate(
-                  widget.data.imageUrls.length,
+                  widget.imageUrls.length,
                   //*single indicator
                   (index) {
                     final bool isCurrentPage = index == currentPage;

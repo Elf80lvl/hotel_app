@@ -25,11 +25,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "about_the_hotel": MessageLookupByLibrary.simpleMessage("об отеле"),
         "all_necessary":
             MessageLookupByLibrary.simpleMessage("все необходимое"),
+        "choose_number": MessageLookupByLibrary.simpleMessage("выбрать номер"),
         "facilities": MessageLookupByLibrary.simpleMessage("удобства"),
         "from": MessageLookupByLibrary.simpleMessage("от"),
         "hotel": MessageLookupByLibrary.simpleMessage("отель"),
         "included": MessageLookupByLibrary.simpleMessage("что включено"),
         "not_included": MessageLookupByLibrary.simpleMessage("что не включено"),
+        "room_description":
+            MessageLookupByLibrary.simpleMessage("подробнее о номере"),
         "to_room_selection":
             MessageLookupByLibrary.simpleMessage("к выбору номера")
       };

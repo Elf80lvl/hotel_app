@@ -1,15 +1,20 @@
 import 'package:app_test_vacancy/data/const.dart';
 import 'package:app_test_vacancy/generated/l10n.dart';
-import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:flutter/material.dart';
 
 class PriceWidget extends StatelessWidget {
   const PriceWidget({
     super.key,
-    required this.data,
+    required this.price,
+    required this.pricePer,
+    required this.isMinimalPrice,
+    // required this.data,
   });
 
-  final HotelInfoModel data;
+  // final HotelInfoModel data;
+  final double price;
+  final String pricePer;
+  final bool isMinimalPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +27,9 @@ class PriceWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '${S.of(context).from} ${data.minimalPrice.toString()} ₽ ',
+              isMinimalPrice
+                  ? '${S.of(context).from} ${price.toString()} ₽ '
+                  : '${price.toString()} ₽ ',
               style: const TextStyle(
                 fontFamily: kFontFamilyDefault,
                 fontSize: 30,
@@ -30,7 +37,7 @@ class PriceWidget extends StatelessWidget {
               ),
             ),
             Text(
-              data.priceForIt.toLowerCase(),
+              pricePer.toLowerCase(),
               style: const TextStyle(
                 fontFamily: kFontFamilyDefault,
                 fontSize: 16,

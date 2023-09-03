@@ -12,6 +12,7 @@ class RoomPageBloc extends Bloc<RoomPageEvent, RoomPageState> {
       emit(RoomPageLoadingState());
       try {
         final data = await Network.getRoomInfo();
+
         emit(RoomPageLoadedState(data: data));
       } catch (e) {
         emit(RoomPageErrorState(error: e));

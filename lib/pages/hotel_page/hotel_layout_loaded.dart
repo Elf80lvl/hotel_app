@@ -1,13 +1,13 @@
 import 'package:app_test_vacancy/data/const.dart';
 import 'package:app_test_vacancy/generated/l10n.dart';
 import 'package:app_test_vacancy/models/hotel_info_model.dart';
-import 'package:app_test_vacancy/pages/hotel_page/widgets/gallery_widget2.dart';
+import 'package:app_test_vacancy/widgets_common/gallery_widget2.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_adress_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_description_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_title_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/price_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/rating_tag_widget.dart';
-import 'package:app_test_vacancy/pages/hotel_page/widgets/tags_widget.dart';
+import 'package:app_test_vacancy/widgets_common/tags_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tile_bars.dart';
 import 'package:app_test_vacancy/pages/room_page/room_page.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
@@ -52,7 +52,7 @@ class HotelLayoutLoaded extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  GalleryWidget2(data: data),
+                  GalleryWidget2(imageUrls: data.imageUrls),
                   const SizedBox(height: 16),
                   RatingTagWidget(data: data),
                   const SizedBox(height: 16),
@@ -60,7 +60,11 @@ class HotelLayoutLoaded extends StatelessWidget {
                   const SizedBox(height: 8),
                   HotelAdressWidget(data: data),
                   const SizedBox(height: 16),
-                  PriceWidget(data: data),
+                  PriceWidget(
+                    price: data.minimalPrice.toDouble(),
+                    pricePer: data.priceForIt,
+                    isMinimalPrice: true,
+                  ),
                   const SizedBox(height: 16),
                 ],
               ),

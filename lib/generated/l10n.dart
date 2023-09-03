@@ -129,6 +129,26 @@ class S {
       args: [],
     );
   }
+
+  /// `подробнее о номере`
+  String get room_description {
+    return Intl.message(
+      'подробнее о номере',
+      name: 'room_description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `выбрать номер`
+  String get choose_number {
+    return Intl.message(
+      'выбрать номер',
+      name: 'choose_number',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
