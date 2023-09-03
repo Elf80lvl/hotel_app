@@ -1,7 +1,7 @@
 import 'package:app_test_vacancy/data/const.dart';
 import 'package:app_test_vacancy/models/room_info_model.dart';
+import 'package:app_test_vacancy/widgets_common/appbar_custom_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class RoomPageLoadedLayout extends StatelessWidget {
   final String hotelName;
@@ -12,21 +12,11 @@ class RoomPageLoadedLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: SvgPicture.asset('assets/icons/arrowBackIcon.svg'),
-        ),
-        centerTitle: true,
-        title: Text(
-          hotelName,
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
-            fontFamily: kFontFamilyDefault,
-          ),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kSizeAppBarHeight),
+        child: AppBarCustomWidget(
+          title: hotelName,
+          isBackArrow: true,
         ),
       ),
       body: Center(child: Text(data.rooms[0].name)),

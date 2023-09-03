@@ -58,6 +58,7 @@ const kFontFamilyDefault = 'SF-Pro-Display';
 
 //*SIZE
 const kSizeActionButtonHeight = 48.0;
+const kSizeAppBarHeight = 56.0;
 
 const kDecorationCardFirst = BoxDecoration(
   color: kColorCardBGlight,
