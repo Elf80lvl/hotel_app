@@ -1,8 +1,6 @@
-import 'package:app_test_vacancy/generated/l10n.dart';
 import 'package:app_test_vacancy/pages/hotel_page/bloc/hotel_page_bloc.dart';
 import 'package:app_test_vacancy/pages/hotel_page/hotel_layout_loaded.dart';
-import 'package:app_test_vacancy/service/capitalize_first.dart';
-import 'package:app_test_vacancy/widgets/default_loading_widget.dart';
+import 'package:app_test_vacancy/widgets_common/default_loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,12 +10,6 @@ class HotelPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          S.of(context).hotel.capitalizeFirst(),
-        ),
-      ),
       body: BlocProvider(
         create: (context) => HotelPageBloc()..add(HotelPageGetInfoEvent()),
         child: BlocBuilder<HotelPageBloc, HotelPageState>(
@@ -34,6 +26,11 @@ class HotelPage extends StatelessWidget {
                 child: HotelLayoutLoaded(
                   data: state.data,
                 ),
+              );
+            }
+            if (state is HotelPageErrorState) {
+              return Center(
+                child: Text(state.error.toString()),
               );
             }
             //TODO

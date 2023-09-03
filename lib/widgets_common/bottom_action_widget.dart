@@ -11,7 +11,7 @@ class BottomActionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48 + 16 * 2,
+      height: 48 + 12 * 2,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: kColorCardBGlight,

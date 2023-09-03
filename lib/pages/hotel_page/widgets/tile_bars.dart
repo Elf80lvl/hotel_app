@@ -111,10 +111,9 @@ class SingleTileButton extends StatelessWidget {
           color: kColorBarButtonTextSecondaryLight,
         ),
       ),
-      trailing: const Icon(
-        Icons.arrow_forward_ios_rounded,
-        color: kColorBarButtonTextLight,
-      ),
+      trailing: RotatedBox(
+          quarterTurns: 2,
+          child: SvgPicture.asset('assets/icons/arrowBackIcon.svg')),
     );
   }
 }

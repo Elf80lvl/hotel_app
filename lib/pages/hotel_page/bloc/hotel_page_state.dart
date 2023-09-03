@@ -10,3 +10,9 @@ final class HotelPageLoadedState extends HotelPageState {
 
   HotelPageLoadedState({required this.data});
 }
+
+final class HotelPageErrorState extends HotelPageState {
+  final Object? error;
+
+  HotelPageErrorState({this.error});
+}

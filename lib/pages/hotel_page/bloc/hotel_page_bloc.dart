@@ -10,8 +10,12 @@ class HotelPageBloc extends Bloc<HotelPageEvent, HotelPageState> {
   HotelPageBloc() : super(HotelPageLoadingState()) {
     on<HotelPageGetInfoEvent>((event, emit) async {
       emit(HotelPageLoadingState());
-      final data = await Network.getHotelInfo();
-      emit(HotelPageLoadedState(data: data));
+      try {
+        final data = await Network.getHotelInfo();
+        emit(HotelPageLoadedState(data: data));
+      } catch (e) {
+        emit(HotelPageErrorState(error: e));
+      }
     });
   }
 }

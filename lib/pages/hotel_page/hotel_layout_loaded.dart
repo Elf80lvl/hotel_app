@@ -9,6 +9,7 @@ import 'package:app_test_vacancy/pages/hotel_page/widgets/price_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/rating_tag_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tags_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tile_bars.dart';
+import 'package:app_test_vacancy/pages/room_page/room_page.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
 import 'package:app_test_vacancy/widgets_common/action_button.dart';
 import 'package:app_test_vacancy/widgets_common/bottom_action_widget.dart';
@@ -22,10 +23,22 @@ class HotelLayoutLoaded extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          S.of(context).hotel.capitalizeFirst(),
+        ),
+      ),
       bottomNavigationBar: BottomActionWidget(
         button: ActionButton(
           text: S.of(context).to_room_selection.capitalizeFirst(),
-          onTap: () {},
+          onTap: () {
+            // Navigator.of(context).pushNamed('/room');
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => RoomPage(
+                      hotelName: data.name,
+                    )));
+          },
         ),
       ),
       body: SingleChildScrollView(

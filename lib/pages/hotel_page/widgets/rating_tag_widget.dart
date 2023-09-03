@@ -26,7 +26,7 @@ class RatingTagWidget extends StatelessWidget {
             child: Row(
               children: [
                 SvgPicture.asset('assets/icons/star.svg'),
-                const SizedBox(width: 6),
+                const SizedBox(width: 2),
                 Text(
                   '${data.rating} ${data.ratingName}',
                   style: const TextStyle(

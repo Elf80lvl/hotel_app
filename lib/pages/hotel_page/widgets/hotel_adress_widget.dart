@@ -12,15 +12,18 @@ class HotelAdressWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kPaddingHorizApp),
-      child: Text(
-        data.adress,
-        style: const TextStyle(
-          color: kColorLink,
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-          fontFamily: kFontFamilyDefault,
+    return GestureDetector(
+      onTap: () {},
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: kPaddingHorizApp),
+        child: Text(
+          data.adress,
+          style: const TextStyle(
+            color: kColorLink,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            fontFamily: kFontFamilyDefault,
+          ),
         ),
       ),
     );
