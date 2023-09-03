@@ -40,6 +40,7 @@ const kColorTextFieldTextSecondaryLight = Color(0xffA9ABB7);
 const kColorGalleryIndicatorActiveLight = Color(0xff000000);
 final kColorGalleryIndicatorNotActiveLight =
     const Color(0xff000000).withOpacity(0.2);
+const kColorBottomActionWidgetTopBorder = Color(0xffE8E9EC);
 
 //*BORDER RADIUS
 const kBorderRadiusRatingTag = 5.0;
@@ -47,12 +48,16 @@ const kBorderRadiusGalleryIndicatorBg = 5.0;
 const kBorderRadiusHotelImage = 15.0;
 const kBorderRadiusCard = 12.0;
 const kBorderRadiusButtonBarBG = 15.0;
+const kBorderRadiusActionButton = 15.0;
 
 //*PADDING
 const kPaddingHorizApp = 16.0;
 
 //*FONTS
 const kFontFamilyDefault = 'SF-Pro-Display';
+
+//*SIZE
+const kSizeActionButtonHeight = 48.0;
 
 const kDecorationCardFirst = BoxDecoration(
   color: kColorCardBGlight,

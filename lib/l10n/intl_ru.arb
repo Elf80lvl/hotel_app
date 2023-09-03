@@ -5,5 +5,6 @@
     "facilities": "удобства",
     "included": "что включено",
     "not_included": "что не включено",
-    "all_necessary": "все необходимое"
+    "all_necessary": "все необходимое",
+    "to_room_selection": "к выбору номера"
 }

@@ -29,6 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "from": MessageLookupByLibrary.simpleMessage("от"),
         "hotel": MessageLookupByLibrary.simpleMessage("отель"),
         "included": MessageLookupByLibrary.simpleMessage("что включено"),
-        "not_included": MessageLookupByLibrary.simpleMessage("что не включено")
+        "not_included": MessageLookupByLibrary.simpleMessage("что не включено"),
+        "to_room_selection":
+            MessageLookupByLibrary.simpleMessage("к выбору номера")
       };
 }

@@ -119,6 +119,16 @@ class S {
       args: [],
     );
   }
+
+  /// `к выбору номера`
+  String get to_room_selection {
+    return Intl.message(
+      'к выбору номера',
+      name: 'to_room_selection',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

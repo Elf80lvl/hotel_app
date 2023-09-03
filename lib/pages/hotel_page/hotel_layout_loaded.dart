@@ -10,8 +10,9 @@ import 'package:app_test_vacancy/pages/hotel_page/widgets/rating_tag_widget.dart
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tags_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tile_bars.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
+import 'package:app_test_vacancy/widgets_common/action_button.dart';
+import 'package:app_test_vacancy/widgets_common/bottom_action_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HotelLayoutLoaded extends StatelessWidget {
   final HotelInfoModel data;
@@ -20,71 +21,79 @@ class HotelLayoutLoaded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: const AlwaysScrollableScrollPhysics(),
-      child: Column(
-        children: [
-          //*first card
-          Container(
-            decoration: kDecorationCardFirst,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                GalleryWidget2(data: data),
-                const SizedBox(height: 16),
-                RatingTagWidget(data: data),
-                const SizedBox(height: 16),
-                HotelTitleWidget(data: data),
-                const SizedBox(height: 8),
-                HotelAdressWidget(data: data),
-                const SizedBox(height: 16),
-                PriceWidget(data: data),
-                const SizedBox(height: 16),
-              ],
-            ),
-          ),
-          const SizedBox(height: 8),
-
-          //*second card about the hotel
-          Container(
-            decoration: kDecorationCardSecond,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+    return Scaffold(
+      bottomNavigationBar: BottomActionWidget(
+        button: ActionButton(
+          text: S.of(context).to_room_selection.capitalizeFirst(),
+          onTap: () {},
+        ),
+      ),
+      body: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            //*first card
+            Container(
+              decoration: kDecorationCardFirst,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
+                  GalleryWidget2(data: data),
                   const SizedBox(height: 16),
-
-                  //*about the hotel text
-                  Text(
-                    S.of(context).about_the_hotel.capitalizeFirst(),
-                    style: const TextStyle(
-                      fontSize: 22,
-                      fontFamily: kFontFamilyDefault,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-
+                  RatingTagWidget(data: data),
                   const SizedBox(height: 16),
-
-                  TagsWidget(data: data.peculiarities),
-
+                  HotelTitleWidget(data: data),
+                  const SizedBox(height: 8),
+                  HotelAdressWidget(data: data),
                   const SizedBox(height: 16),
-
-                  HotelDescriptionWidget(data: data),
-
+                  PriceWidget(data: data),
                   const SizedBox(height: 16),
-
-                  const TileBars(),
-                  const SizedBox(height: kPaddingHorizApp),
                 ],
               ),
             ),
-          ),
-          const SizedBox(height: 100),
-        ],
+            const SizedBox(height: 8),
+
+            //*second card about the hotel
+            Container(
+              decoration: kDecorationCardSecond,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 16),
+
+                    //*about the hotel text
+                    Text(
+                      S.of(context).about_the_hotel.capitalizeFirst(),
+                      style: const TextStyle(
+                        fontSize: 22,
+                        fontFamily: kFontFamilyDefault,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+
+                    const SizedBox(height: 16),
+
+                    TagsWidget(data: data.peculiarities),
+
+                    const SizedBox(height: 16),
+
+                    HotelDescriptionWidget(data: data),
+
+                    const SizedBox(height: 16),
+
+                    const TileBars(),
+                    const SizedBox(height: kPaddingHorizApp),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
+          ],
+        ),
       ),
     );
   }
