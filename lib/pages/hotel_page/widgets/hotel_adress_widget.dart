@@ -1,4 +1,4 @@
-import 'package:app_test_vacancy/data/const.dart';
+import 'package:app_test_vacancy/const/const.dart';
 import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:flutter/material.dart';
 

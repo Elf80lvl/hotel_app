@@ -1,7 +1,9 @@
 import 'package:app_test_vacancy/generated/l10n.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/booking_page.dart';
 import 'package:app_test_vacancy/pages/hotel_page/bloc/hotel_page_bloc.dart';
 import 'package:app_test_vacancy/pages/hotel_page/hotel_page.dart';
-import 'package:app_test_vacancy/data/themes.dart';
+import 'package:app_test_vacancy/const/themes.dart';
 import 'package:app_test_vacancy/pages/room_page/bloc/room_page_bloc.dart';
 import 'package:app_test_vacancy/pages/room_page/room_page.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +27,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => RoomPageBloc(),
         ),
+        BlocProvider(
+          create: (context) => BookingPageBloc(),
+        ),
       ],
       child: MaterialApp(
         title: 'Hotel App',
@@ -34,7 +39,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (BuildContext context) => const HotelPage(),
           '/room': (BuildContext context) => const RoomPage(),
-          // '/reservation': (BuildContext context) => const ReservationPage(),
+          '/booking': (BuildContext context) => const BookingPage(),
           // '/paid': (BuildContext context) => const PaidPage(),
         },
         // home: const HotelPage(),

@@ -1,5 +1,5 @@
 import 'package:app_test_vacancy/pages/hotel_page/bloc/hotel_page_bloc.dart';
-import 'package:app_test_vacancy/pages/hotel_page/hotel_layout_loaded.dart';
+import 'package:app_test_vacancy/pages/hotel_page/hotel_page_loaded.dart';
 import 'package:app_test_vacancy/widgets_common/default_loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,7 +23,7 @@ class HotelPage extends StatelessWidget {
                   BlocProvider.of<HotelPageBloc>(context)
                       .add(HotelPageGetInfoEvent());
                 },
-                child: HotelLayoutLoaded(
+                child: HotelPageLoaded(
                   data: state.data,
                 ),
               );

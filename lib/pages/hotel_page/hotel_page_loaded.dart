@@ -1,4 +1,4 @@
-import 'package:app_test_vacancy/data/const.dart';
+import 'package:app_test_vacancy/const/const.dart';
 import 'package:app_test_vacancy/generated/l10n.dart';
 import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:app_test_vacancy/widgets_common/gallery_widget2.dart';
@@ -15,10 +15,10 @@ import 'package:app_test_vacancy/widgets_common/action_button.dart';
 import 'package:app_test_vacancy/widgets_common/bottom_action_widget.dart';
 import 'package:flutter/material.dart';
 
-class HotelLayoutLoaded extends StatelessWidget {
+class HotelPageLoaded extends StatelessWidget {
   final HotelInfoModel data;
 
-  const HotelLayoutLoaded({super.key, required this.data});
+  const HotelPageLoaded({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {

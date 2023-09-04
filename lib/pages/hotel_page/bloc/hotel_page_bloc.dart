@@ -1,5 +1,5 @@
 import 'package:app_test_vacancy/models/hotel_info_model.dart';
-import 'package:app_test_vacancy/service/network.dart';
+import 'package:app_test_vacancy/repositories/hotel_repo.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -11,7 +11,7 @@ class HotelPageBloc extends Bloc<HotelPageEvent, HotelPageState> {
     on<HotelPageGetInfoEvent>((event, emit) async {
       emit(HotelPageLoadingState());
       try {
-        final data = await Network.getHotelInfo();
+        final data = await HotelRepo.getHotelInfo();
         emit(HotelPageLoadedState(data: data));
       } catch (e) {
         emit(HotelPageErrorState(error: e));

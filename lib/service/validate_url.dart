@@ -12,7 +12,6 @@ class ValidateUrl {
       } else {
         return urlPlaceholder;
       }
-      ;
     } catch (e) {
       print(e);
       return urlPlaceholder;

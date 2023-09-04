@@ -8,5 +8,6 @@
     "all_necessary": "все необходимое",
     "to_room_selection": "к выбору номера",
     "room_description": "подробнее о номере",
-    "choose_number": "выбрать номер"
+    "choose_number": "выбрать номер",
+    "booking": "бронирование"
 }

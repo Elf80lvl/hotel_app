@@ -1,4 +1,4 @@
-import 'package:app_test_vacancy/data/const.dart';
+import 'package:app_test_vacancy/const/const.dart';
 import 'package:flutter/material.dart';
 
 final kThemeLight = ThemeData(

@@ -1,6 +1,4 @@
-import 'package:app_test_vacancy/data/const.dart';
-import 'package:app_test_vacancy/service/validate_url.dart';
-import 'package:app_test_vacancy/widgets_common/default_loading_widget.dart';
+import 'package:app_test_vacancy/const/const.dart';
 import 'package:flutter/material.dart';
 
 class GalleryWidget2 extends StatefulWidget {
@@ -44,7 +42,14 @@ class _GalleryWidget2State extends State<GalleryWidget2> {
                       widget.imageUrls[index],
                       loadingBuilder: (context, child, loadingProgress) {
                         if (loadingProgress == null) return child;
-                        return const DefaultLoadingWidget();
+                        return Center(
+                          child: CircularProgressIndicator(
+                            value: loadingProgress.expectedTotalBytes != null
+                                ? loadingProgress.cumulativeBytesLoaded /
+                                    loadingProgress.expectedTotalBytes!
+                                : null,
+                          ),
+                        );
                       },
                       errorBuilder: (context, error, stackTrace) {
                         return const Center(

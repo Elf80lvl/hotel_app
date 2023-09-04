@@ -1,5 +1,5 @@
 import 'package:app_test_vacancy/models/room_info_model.dart';
-import 'package:app_test_vacancy/service/network.dart';
+import 'package:app_test_vacancy/repositories/hotel_repo.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -11,7 +11,7 @@ class RoomPageBloc extends Bloc<RoomPageEvent, RoomPageState> {
     on<RoomPageGetRoomInfoEvent>((event, emit) async {
       emit(RoomPageLoadingState());
       try {
-        final data = await Network.getRoomInfo();
+        final data = await HotelRepo.getRoomInfo();
 
         emit(RoomPageLoadedState(data: data));
       } catch (e) {

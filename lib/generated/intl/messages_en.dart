@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "about_the_hotel": MessageLookupByLibrary.simpleMessage("об отеле"),
         "all_necessary":
             MessageLookupByLibrary.simpleMessage("все необходимое"),
+        "booking": MessageLookupByLibrary.simpleMessage("бронирование"),
         "choose_number": MessageLookupByLibrary.simpleMessage("выбрать номер"),
         "facilities": MessageLookupByLibrary.simpleMessage("удобства"),
         "from": MessageLookupByLibrary.simpleMessage("от"),

@@ -149,6 +149,16 @@ class S {
       args: [],
     );
   }
+
+  /// `бронирование`
+  String get booking {
+    return Intl.message(
+      'бронирование',
+      name: 'booking',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
