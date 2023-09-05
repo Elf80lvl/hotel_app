@@ -20,7 +20,7 @@ class BookingPage extends StatelessWidget {
             }
 
             if (state is BookingPageLoadedState) {
-              return BookingPageLoaded(data: state.data);
+              return BookingPageLoaded(data: state.data!);
             }
 
             if (state is BookingPageErrorState) {

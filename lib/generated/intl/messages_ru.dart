@@ -26,14 +26,39 @@ class MessageLookup extends MessageLookupByLibrary {
         "all_necessary":
             MessageLookupByLibrary.simpleMessage("все необходимое"),
         "booking": MessageLookupByLibrary.simpleMessage("бронирование"),
+        "buyer_info":
+            MessageLookupByLibrary.simpleMessage("информация о покупателе"),
+        "buyer_info_tips": MessageLookupByLibrary.simpleMessage(
+            "Эти данные никому не передаются. После оплаты мы вышлем чек на указанный вами номер и почту."),
+        "cell1": MessageLookupByLibrary.simpleMessage("вылет из"),
+        "cell2": MessageLookupByLibrary.simpleMessage("страна, город"),
+        "cell3": MessageLookupByLibrary.simpleMessage("даты"),
+        "cell4": MessageLookupByLibrary.simpleMessage("кол-во ночей"),
+        "cell5": MessageLookupByLibrary.simpleMessage("отель"),
+        "cell6": MessageLookupByLibrary.simpleMessage("номер"),
+        "cell7": MessageLookupByLibrary.simpleMessage("питание"),
         "choose_number": MessageLookupByLibrary.simpleMessage("выбрать номер"),
+        "citizenship": MessageLookupByLibrary.simpleMessage("гражданство"),
+        "date_of_birth": MessageLookupByLibrary.simpleMessage("дата рождения"),
+        "email": MessageLookupByLibrary.simpleMessage("почта"),
+        "email_invalid": MessageLookupByLibrary.simpleMessage(
+            "Введите действительную почту"),
         "facilities": MessageLookupByLibrary.simpleMessage("удобства"),
         "from": MessageLookupByLibrary.simpleMessage("от"),
         "hotel": MessageLookupByLibrary.simpleMessage("отель"),
         "included": MessageLookupByLibrary.simpleMessage("что включено"),
+        "name": MessageLookupByLibrary.simpleMessage("имя"),
+        "nights": MessageLookupByLibrary.simpleMessage("ночей"),
         "not_included": MessageLookupByLibrary.simpleMessage("что не включено"),
+        "passport_exp_date": MessageLookupByLibrary.simpleMessage(
+            "срок действия загранпаспорта"),
+        "passport_number":
+            MessageLookupByLibrary.simpleMessage("номер загранпаспорта"),
+        "pay": MessageLookupByLibrary.simpleMessage("оплатить"),
+        "phone_number": MessageLookupByLibrary.simpleMessage("номер телефона"),
         "room_description":
             MessageLookupByLibrary.simpleMessage("подробнее о номере"),
+        "surname": MessageLookupByLibrary.simpleMessage("фамилия"),
         "to_room_selection":
             MessageLookupByLibrary.simpleMessage("к выбору номера")
       };

@@ -10,11 +10,14 @@ sealed class BookingPageState extends Equatable {
 final class BookingPageLoadingState extends BookingPageState {}
 
 final class BookingPageLoadedState extends BookingPageState {
-  final BookingInfoModel data;
+  final BookingInfoModel? data;
+  final bool isPhoneValid;
+  final bool isEmailValid;
 
-  const BookingPageLoadedState({required this.data});
+  const BookingPageLoadedState(
+      {required this.isPhoneValid, required this.isEmailValid, this.data});
   @override
-  List<Object> get props => [data];
+  List<Object> get props => [isPhoneValid, isEmailValid];
 }
 
 final class BookingPageErrorState extends BookingPageState {

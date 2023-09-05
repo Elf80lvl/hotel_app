@@ -36,6 +36,7 @@ final kColorRatingTagBG = const Color(0xffFFC700).withOpacity(0.2);
 const kColorTextFieldBGlight = Color(0xffF6F6F9);
 const kColorTextFieldTextPrimaryLight = Color(0xff14142B);
 const kColorTextFieldTextSecondaryLight = Color(0xffA9ABB7);
+final kColorTextFieldErrorBG = const Color(0xffEB5757).withOpacity(0.15);
 //*gallery indicator
 const kColorGalleryIndicatorActiveLight = Color(0xff000000);
 final kColorGalleryIndicatorNotActiveLight =
@@ -49,6 +50,7 @@ const kBorderRadiusHotelImage = 15.0;
 const kBorderRadiusCard = 12.0;
 const kBorderRadiusButtonBarBG = 15.0;
 const kBorderRadiusActionButton = 15.0;
+const kBorderRadiusTextField = 10.0;
 
 //*PADDING
 const kPaddingHorizApp = 16.0;

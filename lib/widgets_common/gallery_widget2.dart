@@ -1,5 +1,7 @@
 import 'package:app_test_vacancy/const/const.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
 
 class GalleryWidget2 extends StatefulWidget {
   const GalleryWidget2({
@@ -38,31 +40,65 @@ class _GalleryWidget2State extends State<GalleryWidget2> {
                   child: ClipRRect(
                     borderRadius:
                         BorderRadius.circular(kBorderRadiusHotelImage),
-                    child: Image.network(
-                      widget.imageUrls[index],
-                      loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress == null) return child;
-                        return Center(
-                          child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                    loadingProgress.expectedTotalBytes!
-                                : null,
+                    child: CachedNetworkImage(
+                      imageUrl: widget.imageUrls[index],
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      fadeOutDuration: const Duration(milliseconds: 500),
+                      placeholder: (context, url) => Shimmer(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: kColorTextFieldBGlight,
+                            borderRadius: BorderRadius.circular(
+                              kBorderRadiusHotelImage,
+                            ),
                           ),
-                        );
-                      },
-                      errorBuilder: (context, error, stackTrace) {
-                        return const Center(
-                          child: Icon(
-                            Icons.broken_image,
-                            color: Colors.grey,
+                        ),
+                      ),
+                      errorWidget: (context, url, error) => Center(
+                          child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.broken_image_rounded,
+                            color: kColorTextSecondaryLight,
                             size: 64,
                           ),
-                        );
-                      },
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+                          Text(
+                            error.toString(),
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: kColorTextSecondaryLight,
+                            ),
+                          ),
+                        ],
+                      )),
                     ),
+                    // child: Image.network(
+                    //   widget.imageUrls[index],
+                    //   loadingBuilder: (context, child, loadingProgress) {
+                    //     if (loadingProgress == null) return child;
+                    //     return Center(
+                    //       child: CircularProgressIndicator(
+                    //         value: loadingProgress.expectedTotalBytes != null
+                    //             ? loadingProgress.cumulativeBytesLoaded /
+                    //                 loadingProgress.expectedTotalBytes!
+                    //             : null,
+                    //       ),
+                    //     );
+                    //   },
+                    //   errorBuilder: (context, error, stackTrace) {
+                    //     return const Center(
+                    //       child: Icon(
+                    //         Icons.broken_image,
+                    //         color: Colors.grey,
+                    //         size: 64,
+                    //       ),
+                    //     );
+                    //   },
+                    //   width: double.infinity,
+                    //   fit: BoxFit.cover,
+                    // ),
                   ),
                 );
               }),

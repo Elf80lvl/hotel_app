@@ -159,6 +159,206 @@ class S {
       args: [],
     );
   }
+
+  /// `вылет из`
+  String get cell1 {
+    return Intl.message(
+      'вылет из',
+      name: 'cell1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `страна, город`
+  String get cell2 {
+    return Intl.message(
+      'страна, город',
+      name: 'cell2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `даты`
+  String get cell3 {
+    return Intl.message(
+      'даты',
+      name: 'cell3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `кол-во ночей`
+  String get cell4 {
+    return Intl.message(
+      'кол-во ночей',
+      name: 'cell4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `отель`
+  String get cell5 {
+    return Intl.message(
+      'отель',
+      name: 'cell5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `номер`
+  String get cell6 {
+    return Intl.message(
+      'номер',
+      name: 'cell6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `питание`
+  String get cell7 {
+    return Intl.message(
+      'питание',
+      name: 'cell7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ночей`
+  String get nights {
+    return Intl.message(
+      'ночей',
+      name: 'nights',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `информация о покупателе`
+  String get buyer_info {
+    return Intl.message(
+      'информация о покупателе',
+      name: 'buyer_info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Эти данные никому не передаются. После оплаты мы вышлем чек на указанный вами номер и почту.`
+  String get buyer_info_tips {
+    return Intl.message(
+      'Эти данные никому не передаются. После оплаты мы вышлем чек на указанный вами номер и почту.',
+      name: 'buyer_info_tips',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `номер телефона`
+  String get phone_number {
+    return Intl.message(
+      'номер телефона',
+      name: 'phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `почта`
+  String get email {
+    return Intl.message(
+      'почта',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `имя`
+  String get name {
+    return Intl.message(
+      'имя',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `фамилия`
+  String get surname {
+    return Intl.message(
+      'фамилия',
+      name: 'surname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `дата рождения`
+  String get date_of_birth {
+    return Intl.message(
+      'дата рождения',
+      name: 'date_of_birth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `гражданство`
+  String get citizenship {
+    return Intl.message(
+      'гражданство',
+      name: 'citizenship',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `номер загранпаспорта`
+  String get passport_number {
+    return Intl.message(
+      'номер загранпаспорта',
+      name: 'passport_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `срок действия загранпаспорта`
+  String get passport_exp_date {
+    return Intl.message(
+      'срок действия загранпаспорта',
+      name: 'passport_exp_date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `оплатить`
+  String get pay {
+    return Intl.message(
+      'оплатить',
+      name: 'pay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Введите действительную почту`
+  String get email_invalid {
+    return Intl.message(
+      'Введите действительную почту',
+      name: 'email_invalid',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

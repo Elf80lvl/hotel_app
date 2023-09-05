@@ -2,11 +2,11 @@ import 'package:app_test_vacancy/const/const.dart';
 import 'package:app_test_vacancy/generated/l10n.dart';
 import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:app_test_vacancy/widgets_common/gallery_widget2.dart';
-import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_adress_widget.dart';
+import 'package:app_test_vacancy/widgets_common/hotel_adress_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_description_widget.dart';
-import 'package:app_test_vacancy/pages/hotel_page/widgets/hotel_title_widget.dart';
+import 'package:app_test_vacancy/widgets_common/card_title_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/price_widget.dart';
-import 'package:app_test_vacancy/pages/hotel_page/widgets/rating_tag_widget.dart';
+import 'package:app_test_vacancy/widgets_common/rating_tag_widget.dart';
 import 'package:app_test_vacancy/widgets_common/tags_widget.dart';
 import 'package:app_test_vacancy/pages/hotel_page/widgets/tile_bars.dart';
 import 'package:app_test_vacancy/pages/room_page/room_page.dart';
@@ -54,11 +54,13 @@ class HotelPageLoaded extends StatelessWidget {
                 children: [
                   GalleryWidget2(imageUrls: data.imageUrls),
                   const SizedBox(height: 16),
-                  RatingTagWidget(data: data),
+                  RatingTagWidget(
+                      rating: data.rating.toDouble(),
+                      ratingName: data.ratingName),
                   const SizedBox(height: 16),
-                  HotelTitleWidget(data: data),
+                  CardTitleWidget(title: data.name),
                   const SizedBox(height: 8),
-                  HotelAdressWidget(data: data),
+                  HotelAdressWidget(adress: data.adress),
                   const SizedBox(height: 16),
                   PriceWidget(
                     price: data.minimalPrice.toDouble(),

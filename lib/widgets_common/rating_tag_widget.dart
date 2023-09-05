@@ -1,15 +1,18 @@
 import 'package:app_test_vacancy/const/const.dart';
-import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class RatingTagWidget extends StatelessWidget {
   const RatingTagWidget({
     super.key,
-    required this.data,
+    required this.rating,
+    required this.ratingName,
+    // required this.data,
   });
 
-  final HotelInfoModel data;
+  // final HotelInfoModel data;
+  final double rating;
+  final String ratingName;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class RatingTagWidget extends StatelessWidget {
                 SvgPicture.asset('assets/icons/star.svg'),
                 const SizedBox(width: 2),
                 Text(
-                  '${data.rating} ${data.ratingName}',
+                  '${rating.floor()} $ratingName',
                   style: const TextStyle(
                     fontFamily: kFontFamilyDefault,
                     color: kColorRatingTagPrimary,

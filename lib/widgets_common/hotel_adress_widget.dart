@@ -1,14 +1,16 @@
 import 'package:app_test_vacancy/const/const.dart';
-import 'package:app_test_vacancy/models/hotel_info_model.dart';
+// import 'package:app_test_vacancy/models/hotel_info_model.dart';
 import 'package:flutter/material.dart';
 
 class HotelAdressWidget extends StatelessWidget {
   const HotelAdressWidget({
     super.key,
-    required this.data,
+    required this.adress,
+    // required this.data,
   });
 
-  final HotelInfoModel data;
+  // final HotelInfoModel data;
+  final String adress;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class HotelAdressWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kPaddingHorizApp),
         child: Text(
-          data.adress,
+          adress,
           style: const TextStyle(
             color: kColorLink,
             fontSize: 14,
