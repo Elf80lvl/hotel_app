@@ -76,8 +76,10 @@ class _CardBuyerInfoState extends State<CardBuyerInfo> {
                         //   inputFormatters: [_phoneMask],
                         // ),
                         PhoneTextField(
-                          phoneController: _phoneController,
+                          isValid: state.isPhoneValid,
                           hint: S.of(context).phone_number.capitalizeFirst(),
+                          errorText:
+                              S.of(context).phone_invalid.capitalizeFirst(),
                         ),
                         const SizedBox(height: 8),
                         EmailTextField(

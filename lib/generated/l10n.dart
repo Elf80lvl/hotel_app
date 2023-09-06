@@ -359,6 +359,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Введите номер телефона`
+  String get phone_invalid {
+    return Intl.message(
+      'Введите номер телефона',
+      name: 'phone_invalid',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

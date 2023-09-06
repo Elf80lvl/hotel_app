@@ -31,12 +31,22 @@ class BookingPageBloc extends Bloc<BookingPageEvent, BookingPageState> {
     });
 
     //
-    on<BookinPageUpdatePhoneEvent>((event, emit) {
+    on<BookingPageUpdatePhoneEvent>((event, emit) {
       phone = event.phone;
+      emit(BookingPageLoadedState(
+        data: data,
+        isEmailValid: isEmailValid,
+        isPhoneValid: isPhoneValid,
+      ));
     });
 
-    on<BookinPageUpdateEmailEvent>((event, emit) {
+    on<BookingPageUpdateEmailEvent>((event, emit) {
       email = event.email;
+      emit(BookingPageLoadedState(
+        data: data,
+        isEmailValid: isEmailValid,
+        isPhoneValid: isPhoneValid,
+      ));
     });
 
     //

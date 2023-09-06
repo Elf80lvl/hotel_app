@@ -1,5 +1,6 @@
 import 'package:app_test_vacancy/const/const.dart';
 import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/widgets/error_text_for_tf.dart';
 import 'package:flutter/material.dart';
 import 'package:app_test_vacancy/service/email_validator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -54,7 +55,7 @@ class _EmailTextFieldState extends State<EmailTextField> {
 
               onChanged: (value) {
                 BlocProvider.of<BookingPageBloc>(context)
-                    .add(BookinPageUpdateEmailEvent(email: _controller.text));
+                    .add(BookingPageUpdateEmailEvent(email: value));
               },
               controller: _controller,
               keyboardType: TextInputType.emailAddress,
@@ -82,7 +83,7 @@ class _EmailTextFieldState extends State<EmailTextField> {
                 // ),
                 filled: true,
                 fillColor: !widget.isValid
-                    ? kColorTextFieldErrorBG
+                    ? Colors.transparent
                     : kColorTextFieldBGlight,
                 alignLabelWithHint: true,
 
@@ -93,33 +94,10 @@ class _EmailTextFieldState extends State<EmailTextField> {
               ),
             ),
           ),
-          ErrorText(
+          ErrorTextForTF(
             text: widget.isValid ? '' : widget.errorText,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class ErrorText extends StatelessWidget {
-  final String text;
-  const ErrorText({
-    super.key,
-    required this.text,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 0,
-      left: 16,
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 12,
-          color: Colors.red,
-        ),
       ),
     );
   }

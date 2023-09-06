@@ -55,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passport_number":
             MessageLookupByLibrary.simpleMessage("номер загранпаспорта"),
         "pay": MessageLookupByLibrary.simpleMessage("оплатить"),
+        "phone_invalid":
+            MessageLookupByLibrary.simpleMessage("Введите номер телефона"),
         "phone_number": MessageLookupByLibrary.simpleMessage("номер телефона"),
         "room_description":
             MessageLookupByLibrary.simpleMessage("подробнее о номере"),

@@ -11,18 +11,17 @@ final class BookingPageGetBookingInfoEvent extends BookingPageEvent {}
 
 final class BookingPageOnSubmitEvent extends BookingPageEvent {}
 
-final class BookinPageUpdatePhoneEvent extends BookingPageEvent {
+final class BookingPageUpdatePhoneEvent extends BookingPageEvent {
   final String phone;
 
-  const BookinPageUpdatePhoneEvent({required this.phone});
+  const BookingPageUpdatePhoneEvent({required this.phone});
   @override
   List<Object> get props => [phone];
 }
 
-final class BookinPageUpdateEmailEvent extends BookingPageEvent {
+final class BookingPageUpdateEmailEvent extends BookingPageEvent {
   final String email;
-
-  const BookinPageUpdateEmailEvent({required this.email});
+  const BookingPageUpdateEmailEvent({required this.email});
   @override
   List<Object> get props => [email];
 }
