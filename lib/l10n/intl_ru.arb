@@ -30,5 +30,17 @@
     "passport_exp_date": "срок действия загранпаспорта",
     "pay": "оплатить",
     "email_invalid": "Введите действительную почту",
-    "phone_invalid": "Введите номер телефона"
+    "phone_invalid": "Введите номер телефона",
+    "name_invalid": "введите имя",
+    "surname_invalid": "введите фамилию",
+    "date_of_birth_invalid": "введите дату рождения",
+    "citizenship_invalid": "введите гражданство",
+    "passport_number_invalid": "введите номер загранпаспорта",
+    "passport_exp_date_invalid": "введите срок действия загранпаспорта",
+    "add_tourist": "добавить туриста",
+    "tourist": "турист",
+    "tour": "тур",
+    "fuel_charge": "топливный сбор",
+    "service_charge": "сервисный сбор",
+    "full_price": "к оплате"
 }

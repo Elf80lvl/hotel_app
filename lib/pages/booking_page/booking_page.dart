@@ -1,4 +1,4 @@
-import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc/booking_page_bloc.dart';
 import 'package:app_test_vacancy/pages/booking_page/booking_page_loaded.dart';
 import 'package:app_test_vacancy/widgets_common/default_loading_widget.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,6 @@
 import 'package:app_test_vacancy/generated/l10n.dart';
-import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/tourists_bloc/tourists_bloc.dart';
 import 'package:app_test_vacancy/pages/booking_page/booking_page.dart';
 import 'package:app_test_vacancy/pages/hotel_page/bloc/hotel_page_bloc.dart';
 import 'package:app_test_vacancy/pages/hotel_page/hotel_page.dart';
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => BookingPageBloc(),
+        ),
+        BlocProvider(
+          create: (context) => TouristsBloc(),
         ),
       ],
       child: MaterialApp(

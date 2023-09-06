@@ -369,6 +369,126 @@ class S {
       args: [],
     );
   }
+
+  /// `введите имя`
+  String get name_invalid {
+    return Intl.message(
+      'введите имя',
+      name: 'name_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `введите фамилию`
+  String get surname_invalid {
+    return Intl.message(
+      'введите фамилию',
+      name: 'surname_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `введите дату рождения`
+  String get date_of_birth_invalid {
+    return Intl.message(
+      'введите дату рождения',
+      name: 'date_of_birth_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `введите гражданство`
+  String get citizenship_invalid {
+    return Intl.message(
+      'введите гражданство',
+      name: 'citizenship_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `введите номер загранпаспорта`
+  String get passport_number_invalid {
+    return Intl.message(
+      'введите номер загранпаспорта',
+      name: 'passport_number_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `введите срок действия загранпаспорта`
+  String get passport_exp_date_invalid {
+    return Intl.message(
+      'введите срок действия загранпаспорта',
+      name: 'passport_exp_date_invalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `добавить туриста`
+  String get add_tourist {
+    return Intl.message(
+      'добавить туриста',
+      name: 'add_tourist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `турист`
+  String get tourist {
+    return Intl.message(
+      'турист',
+      name: 'tourist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `тур`
+  String get tour {
+    return Intl.message(
+      'тур',
+      name: 'tour',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `топливный сбор`
+  String get fuel_charge {
+    return Intl.message(
+      'топливный сбор',
+      name: 'fuel_charge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `сервисный сбор`
+  String get service_charge {
+    return Intl.message(
+      'сервисный сбор',
+      name: 'service_charge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `к оплате`
+  String get full_price {
+    return Intl.message(
+      'к оплате',
+      name: 'full_price',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,17 +1,16 @@
 import 'package:app_test_vacancy/const/const.dart';
-import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc/booking_page_bloc.dart';
 import 'package:app_test_vacancy/pages/booking_page/widgets/error_text_for_tf.dart';
 import 'package:flutter/material.dart';
-import 'package:app_test_vacancy/service/email_validator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class EmailTextField extends StatefulWidget {
+class TextFieldEmail extends StatefulWidget {
   final String errorText;
 
   final String hint;
   final bool isValid;
 
-  const EmailTextField({
+  const TextFieldEmail({
     super.key,
     required this.hint,
     required this.errorText,
@@ -19,10 +18,10 @@ class EmailTextField extends StatefulWidget {
   });
 
   @override
-  State<EmailTextField> createState() => _EmailTextFieldState();
+  State<TextFieldEmail> createState() => _TextFieldEmailState();
 }
 
-class _EmailTextFieldState extends State<EmailTextField> {
+class _TextFieldEmailState extends State<TextFieldEmail> {
   TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {

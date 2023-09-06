@@ -25,6 +25,6 @@ class Validator {
   }
 
   static validateTextFieldText(String text) {
-    return text.isNotEmpty;
+    return text.length > 3;
   }
 }

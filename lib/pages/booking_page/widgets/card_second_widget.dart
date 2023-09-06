@@ -85,10 +85,16 @@ class CardSecondWidget extends StatelessWidget {
 }
 
 class CellRightWidget extends StatelessWidget {
+  final bool? isRightAlign;
+  final FontWeight? fontWeight;
+  final Color? color;
   final String text;
   const CellRightWidget({
     super.key,
     required this.text,
+    this.color,
+    this.fontWeight,
+    this.isRightAlign,
   });
 
   @override
@@ -97,12 +103,18 @@ class CellRightWidget extends StatelessWidget {
       verticalAlignment: TableCellVerticalAlignment.top,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 16.0),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontFamily: kFontFamilyDefault,
-            fontSize: 16,
-            color: kColorTextTitleLight,
+        child: Align(
+          alignment: (isRightAlign != null && isRightAlign == true)
+              ? Alignment.topRight
+              : Alignment.topLeft,
+          child: Text(
+            text,
+            style: TextStyle(
+              fontFamily: kFontFamilyDefault,
+              fontSize: 16,
+              color: color ?? kColorTextTitleLight,
+              fontWeight: fontWeight,
+            ),
           ),
         ),
       ),

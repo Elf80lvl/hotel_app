@@ -1,10 +1,14 @@
 import 'package:app_test_vacancy/const/const.dart';
 import 'package:app_test_vacancy/generated/l10n.dart';
 import 'package:app_test_vacancy/models/booking_info_model.dart';
-import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/tourists_bloc/tourists_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/widgets/card_add_tourist.dart';
 import 'package:app_test_vacancy/pages/booking_page/widgets/card_buyer_info.dart';
 import 'package:app_test_vacancy/pages/booking_page/widgets/card_first_widget.dart';
+import 'package:app_test_vacancy/pages/booking_page/widgets/card_prices.dart';
 import 'package:app_test_vacancy/pages/booking_page/widgets/card_second_widget.dart';
+import 'package:app_test_vacancy/pages/booking_page/widgets/card_tourist.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
 import 'package:app_test_vacancy/widgets_common/action_button.dart';
 import 'package:app_test_vacancy/widgets_common/appbar_custom_widget.dart';
@@ -48,6 +52,25 @@ class BookingPageLoaded extends StatelessWidget {
             const SizedBox(height: 8),
             const CardBuyerInfo(),
             const SizedBox(height: 8),
+
+            //*tourists. Generate amount of CardTourists based on the touristsCounter from bloc
+            BlocBuilder<TouristsBloc, TouristsState>(
+              builder: (context, state) {
+                return Column(
+                  children: List.generate(
+                    state.touristsCounter,
+                    (index) => CardTourist(
+                      index: index,
+                    ),
+                  ),
+                );
+              },
+            ),
+
+            const CardAddTourist(),
+            const SizedBox(height: 8),
+            const CardPrices(),
+            const SizedBox(height: 10),
           ],
         ),
       ),

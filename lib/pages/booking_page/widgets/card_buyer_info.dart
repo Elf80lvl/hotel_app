@@ -1,8 +1,8 @@
 import 'package:app_test_vacancy/const/const.dart';
 import 'package:app_test_vacancy/generated/l10n.dart';
-import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
-import 'package:app_test_vacancy/pages/booking_page/widgets/email_text_field.dart';
-import 'package:app_test_vacancy/pages/booking_page/widgets/phone_text_field.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/widgets/text_field_email.dart';
+import 'package:app_test_vacancy/pages/booking_page/widgets/text_field_phone.dart';
 import 'package:app_test_vacancy/service/capitalize_first.dart';
 import 'package:app_test_vacancy/widgets_common/card_title_widget.dart';
 import 'package:flutter/material.dart';
@@ -75,14 +75,14 @@ class _CardBuyerInfoState extends State<CardBuyerInfo> {
                         //   hint: S.of(context).phone_number.capitalizeFirst(),
                         //   inputFormatters: [_phoneMask],
                         // ),
-                        PhoneTextField(
+                        TextFieldPhone(
                           isValid: state.isPhoneValid,
                           hint: S.of(context).phone_number.capitalizeFirst(),
                           errorText:
                               S.of(context).phone_invalid.capitalizeFirst(),
                         ),
                         const SizedBox(height: 8),
-                        EmailTextField(
+                        TextFieldEmail(
                           isValid: state.isEmailValid,
                           hint: S.of(context).email.capitalizeFirst(),
                           errorText: S.of(context).email_invalid,

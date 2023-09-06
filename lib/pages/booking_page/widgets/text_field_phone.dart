@@ -1,17 +1,17 @@
 import 'package:app_test_vacancy/const/const.dart';
-import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc.dart';
+import 'package:app_test_vacancy/pages/booking_page/bloc/booking_page_bloc/booking_page_bloc.dart';
 import 'package:app_test_vacancy/pages/booking_page/widgets/error_text_for_tf.dart';
 import 'package:flutter/material.dart';
-import 'package:app_test_vacancy/service/email_validator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
-class PhoneTextField extends StatefulWidget {
+class TextFieldPhone extends StatefulWidget {
   final String errorText;
 
   final String hint;
   final bool isValid;
 
-  const PhoneTextField({
+  const TextFieldPhone({
     super.key,
     required this.hint,
     required this.errorText,
@@ -19,11 +19,18 @@ class PhoneTextField extends StatefulWidget {
   });
 
   @override
-  State<PhoneTextField> createState() => _PhoneTextFieldState();
+  State<TextFieldPhone> createState() => _TextFieldPhoneState();
 }
 
-class _PhoneTextFieldState extends State<PhoneTextField> {
+class _TextFieldPhoneState extends State<TextFieldPhone> {
   TextEditingController _controller = TextEditingController();
+
+  final _phoneMask = MaskTextInputFormatter(
+    mask: '+7 (###) ###-##-##',
+    filter: {"#": RegExp(r'[0-9]')},
+    type: MaskAutoCompletionType.lazy,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,6 +46,7 @@ class _PhoneTextFieldState extends State<PhoneTextField> {
         children: [
           Center(
             child: TextFormField(
+              inputFormatters: [_phoneMask],
               // focusNode: _focusNode,
               // autovalidateMode: AutovalidateMode.onUserInteraction,
               // validator: (value) {
@@ -102,13 +110,3 @@ class _PhoneTextFieldState extends State<PhoneTextField> {
     );
   }
 }
-
-
-
-
-
-// final _phoneMask = MaskTextInputFormatter(
-//     mask: '+7 (###) ###-##-##',
-//     filter: {"#": RegExp(r'[0-9]')},
-//     type: MaskAutoCompletionType.lazy,
-//   );

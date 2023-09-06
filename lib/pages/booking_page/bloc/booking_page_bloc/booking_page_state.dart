@@ -14,8 +14,11 @@ final class BookingPageLoadedState extends BookingPageState {
   final bool isPhoneValid;
   final bool isEmailValid;
 
-  const BookingPageLoadedState(
-      {required this.isPhoneValid, required this.isEmailValid, this.data});
+  const BookingPageLoadedState({
+    required this.isPhoneValid,
+    required this.isEmailValid,
+    this.data,
+  });
   @override
   List<Object> get props => [isPhoneValid, isEmailValid];
 }

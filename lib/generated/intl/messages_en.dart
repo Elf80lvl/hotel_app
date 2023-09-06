@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "about_the_hotel": MessageLookupByLibrary.simpleMessage("об отеле"),
+        "add_tourist": MessageLookupByLibrary.simpleMessage("добавить туриста"),
         "all_necessary":
             MessageLookupByLibrary.simpleMessage("все необходимое"),
         "booking": MessageLookupByLibrary.simpleMessage("бронирование"),
@@ -39,29 +40,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "cell7": MessageLookupByLibrary.simpleMessage("питание"),
         "choose_number": MessageLookupByLibrary.simpleMessage("выбрать номер"),
         "citizenship": MessageLookupByLibrary.simpleMessage("гражданство"),
+        "citizenship_invalid":
+            MessageLookupByLibrary.simpleMessage("введите гражданство"),
         "date_of_birth": MessageLookupByLibrary.simpleMessage("дата рождения"),
+        "date_of_birth_invalid":
+            MessageLookupByLibrary.simpleMessage("введите дату рождения"),
         "email": MessageLookupByLibrary.simpleMessage("почта"),
         "email_invalid": MessageLookupByLibrary.simpleMessage(
             "Введите действительную почту"),
         "facilities": MessageLookupByLibrary.simpleMessage("удобства"),
         "from": MessageLookupByLibrary.simpleMessage("от"),
+        "fuel_charge": MessageLookupByLibrary.simpleMessage("топливный сбор"),
+        "full_price": MessageLookupByLibrary.simpleMessage("к оплате"),
         "hotel": MessageLookupByLibrary.simpleMessage("отель"),
         "included": MessageLookupByLibrary.simpleMessage("что включено"),
         "name": MessageLookupByLibrary.simpleMessage("имя"),
+        "name_invalid": MessageLookupByLibrary.simpleMessage("введите имя"),
         "nights": MessageLookupByLibrary.simpleMessage("ночей"),
         "not_included": MessageLookupByLibrary.simpleMessage("что не включено"),
         "passport_exp_date": MessageLookupByLibrary.simpleMessage(
             "срок действия загранпаспорта"),
+        "passport_exp_date_invalid": MessageLookupByLibrary.simpleMessage(
+            "введите срок действия загранпаспорта"),
         "passport_number":
             MessageLookupByLibrary.simpleMessage("номер загранпаспорта"),
+        "passport_number_invalid": MessageLookupByLibrary.simpleMessage(
+            "введите номер загранпаспорта"),
         "pay": MessageLookupByLibrary.simpleMessage("оплатить"),
         "phone_invalid":
             MessageLookupByLibrary.simpleMessage("Введите номер телефона"),
         "phone_number": MessageLookupByLibrary.simpleMessage("номер телефона"),
         "room_description":
             MessageLookupByLibrary.simpleMessage("подробнее о номере"),
+        "service_charge":
+            MessageLookupByLibrary.simpleMessage("сервисный сбор"),
         "surname": MessageLookupByLibrary.simpleMessage("фамилия"),
+        "surname_invalid":
+            MessageLookupByLibrary.simpleMessage("введите фамилию"),
         "to_room_selection":
-            MessageLookupByLibrary.simpleMessage("к выбору номера")
+            MessageLookupByLibrary.simpleMessage("к выбору номера"),
+        "tour": MessageLookupByLibrary.simpleMessage("тур"),
+        "tourist": MessageLookupByLibrary.simpleMessage("турист")
       };
 }

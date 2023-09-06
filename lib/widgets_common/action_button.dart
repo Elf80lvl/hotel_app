@@ -14,6 +14,8 @@ class ActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
+        backgroundColor:
+            const MaterialStatePropertyAll<Color>(kColorButtonLight),
         elevation: const MaterialStatePropertyAll<double>(0),
         minimumSize: const MaterialStatePropertyAll<Size>(
           Size.fromHeight(kSizeActionButtonHeight),

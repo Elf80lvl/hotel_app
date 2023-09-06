@@ -51,6 +51,7 @@ const kBorderRadiusCard = 12.0;
 const kBorderRadiusButtonBarBG = 15.0;
 const kBorderRadiusActionButton = 15.0;
 const kBorderRadiusTextField = 10.0;
+const kBorderRadiusIconButton = 6.0;
 
 //*PADDING
 const kPaddingHorizApp = 16.0;
