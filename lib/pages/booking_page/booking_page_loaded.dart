@@ -31,13 +31,26 @@ class BookingPageLoaded extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomActionWidget(
-        button: ActionButton(
-          text:
-              '${S.of(context).pay.capitalizeFirst()} ${data.tourPrice + data.fuelCharge + data.serviceCharge} ₽',
-          onTap: () {
-            BlocProvider.of<BookingPageBloc>(context)
-                .add(BookingPageOnSubmitEvent());
+        button: BlocListener<BookingPageBloc, BookingPageState>(
+          listener: (context, state) {
+            if (state is BookinPageSuccesState) {
+              Navigator.pushNamed(context, '/paid');
+            }
           },
+          child: BlocBuilder<BookingPageBloc, BookingPageState>(
+            builder: (context, state) {
+              return ActionButton(
+                text:
+                    '${S.of(context).pay.capitalizeFirst()} ${data.tourPrice + data.fuelCharge + data.serviceCharge} ₽',
+                onTap: () {
+                  BlocProvider.of<BookingPageBloc>(context)
+                      .add(BookingPageOnSubmitEvent());
+
+                  // BlocProvider.of<TouristsBloc>(context).add(TouristsOnSubmitEvent());
+                },
+              );
+            },
+          ),
         ),
       ),
       body: SingleChildScrollView(

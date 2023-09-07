@@ -58,6 +58,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "name_invalid": MessageLookupByLibrary.simpleMessage("введите имя"),
         "nights": MessageLookupByLibrary.simpleMessage("ночей"),
         "not_included": MessageLookupByLibrary.simpleMessage("что не включено"),
+        "order_succes_text":
+            MessageLookupByLibrary.simpleMessage("Ваш заказ принят в работу"),
+        "order_succes_text2":
+            MessageLookupByLibrary.simpleMessage("Потверждение заказа "),
+        "order_succes_text3": MessageLookupByLibrary.simpleMessage(
+            "может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление."),
+        "paid": MessageLookupByLibrary.simpleMessage("Заказ оплачен"),
         "passport_exp_date": MessageLookupByLibrary.simpleMessage(
             "срок действия загранпаспорта"),
         "passport_exp_date_invalid": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("подробнее о номере"),
         "service_charge":
             MessageLookupByLibrary.simpleMessage("сервисный сбор"),
+        "super_text": MessageLookupByLibrary.simpleMessage("супер!"),
         "surname": MessageLookupByLibrary.simpleMessage("фамилия"),
         "surname_invalid":
             MessageLookupByLibrary.simpleMessage("введите фамилию"),

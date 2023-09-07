@@ -53,12 +53,21 @@ class BookingPageBloc extends Bloc<BookingPageEvent, BookingPageState> {
     on<BookingPageOnSubmitEvent>((event, emit) {
       isPhoneValid = Validator.validateTextFieldText(phone);
       isEmailValid = Validator.validateEmail(email);
-      print('email from bloc: $email');
-      emit(BookingPageLoadedState(
-        data: data,
-        isEmailValid: isEmailValid,
-        isPhoneValid: isPhoneValid,
-      ));
+      // print('email from bloc: $email');
+      if (isPhoneValid && isEmailValid) {
+        emit(BookinPageSuccesState());
+        emit(BookingPageLoadedState(
+          data: data,
+          isEmailValid: isEmailValid,
+          isPhoneValid: isPhoneValid,
+        ));
+      } else {
+        emit(BookingPageLoadedState(
+          data: data,
+          isEmailValid: isEmailValid,
+          isPhoneValid: isPhoneValid,
+        ));
+      }
     });
   }
 }

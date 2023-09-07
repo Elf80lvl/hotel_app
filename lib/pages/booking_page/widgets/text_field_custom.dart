@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TextFieldCustom extends StatefulWidget {
-  // final bool isValid;
+  final bool isValid;
   final String errorText;
   final String hint;
   final Function(String)? onChanged;
@@ -15,7 +15,7 @@ class TextFieldCustom extends StatefulWidget {
     required this.hint,
     required this.errorText,
     required this.onChanged,
-    // required this.isValid,
+    required this.isValid,
   });
 
   @override
@@ -25,7 +25,7 @@ class TextFieldCustom extends StatefulWidget {
 class _TextFieldCustomState extends State<TextFieldCustom> {
   TextEditingController _controller = TextEditingController();
 
-  bool isValid = true;
+  // bool isValid = true;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,8 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
       height: 52,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(kBorderRadiusTextField),
-        color: !isValid ? kColorTextFieldErrorBG : kColorTextFieldBGlight,
+        color:
+            !widget.isValid ? kColorTextFieldErrorBG : kColorTextFieldBGlight,
         // color: Colors.red,
       ),
       child: Stack(
@@ -86,8 +87,9 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
                 //   color: kColorTextFieldTextSecondaryLight,
                 // ),
                 filled: true,
-                fillColor:
-                    !isValid ? Colors.transparent : kColorTextFieldBGlight,
+                fillColor: !widget.isValid
+                    ? Colors.transparent
+                    : kColorTextFieldBGlight,
                 alignLabelWithHint: true,
 
                 border: OutlineInputBorder(
@@ -98,7 +100,7 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
             ),
           ),
           ErrorTextForTF(
-            text: isValid ? '' : widget.errorText,
+            text: widget.isValid ? '' : widget.errorText,
           ),
         ],
       ),

@@ -30,3 +30,5 @@ final class BookingPageErrorState extends BookingPageState {
   @override
   List<Object> get props => [error];
 }
+
+final class BookinPageSuccesState extends BookingPageState {}

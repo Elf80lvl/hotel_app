@@ -5,6 +5,7 @@ import 'package:app_test_vacancy/pages/booking_page/booking_page.dart';
 import 'package:app_test_vacancy/pages/hotel_page/bloc/hotel_page_bloc.dart';
 import 'package:app_test_vacancy/pages/hotel_page/hotel_page.dart';
 import 'package:app_test_vacancy/const/themes.dart';
+import 'package:app_test_vacancy/pages/paid_page/paid_page.dart';
 import 'package:app_test_vacancy/pages/room_page/bloc/room_page_bloc.dart';
 import 'package:app_test_vacancy/pages/room_page/room_page.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
           '/': (BuildContext context) => const HotelPage(),
           '/room': (BuildContext context) => const RoomPage(),
           '/booking': (BuildContext context) => const BookingPage(),
-          // '/paid': (BuildContext context) => const PaidPage(),
+          '/paid': (BuildContext context) => const PaidPage(),
         },
         // home: const HotelPage(),
         localizationsDelegates: const [

@@ -489,6 +489,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Заказ оплачен`
+  String get paid {
+    return Intl.message(
+      'Заказ оплачен',
+      name: 'paid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `супер!`
+  String get super_text {
+    return Intl.message(
+      'супер!',
+      name: 'super_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ваш заказ принят в работу`
+  String get order_succes_text {
+    return Intl.message(
+      'Ваш заказ принят в работу',
+      name: 'order_succes_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Потверждение заказа `
+  String get order_succes_text2 {
+    return Intl.message(
+      'Потверждение заказа ',
+      name: 'order_succes_text2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.`
+  String get order_succes_text3 {
+    return Intl.message(
+      'может занять некоторое время (от 1 часа до суток). Как только мы получим ответ от туроператора, вам на почту придет уведомление.',
+      name: 'order_succes_text3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

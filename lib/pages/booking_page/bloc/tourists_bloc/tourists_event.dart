@@ -19,3 +19,12 @@ class TouristUpdateNameEvent extends TouristsEvent {
   @override
   List<Object> get props => [index, name];
 }
+
+class TouristUpdateSurnameEvent extends TouristsEvent {
+  final int index;
+  final String surname;
+
+  const TouristUpdateSurnameEvent({required this.index, required this.surname});
+  @override
+  List<Object> get props => [index, surname];
+}
